@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart POS Software for Retail Stores & Inventory | PHIXX LABS</title>
+    <!-- Primary meta tags -->
+    <meta
+      name="description"
+      content="Discover the modern POS system by PHIXX LABS. Built for retail stores, clothing shops, mobile stores, and more with real-time inventory management and powerful analytics."
+    />
+    <meta
+      name="keywords"
+      content="POS Software, Retail POS System, Point of Sale System, Best POS Software, POS System for Retail, Cloud POS Software, POS Software for Small Business, Retail Inventory POS, Modern POS System, Business POS Solution, best pos software for retail stores, modern pos system for small businesses, cloud based pos system for retail, inventory management pos software, pos software for clothing stores, pos software for mobile phone shops, pos software for toy stores, pos system for motorcycle agencies, customizable retail pos software, affordable pos software for small business, fast pos system with real time sync, react based pos software, firebase pos system, pos system with inventory tracking, best point of sale software for shops"
+    />
+    <meta name="author" content="PHIXX LABS" />
+    <!-- LSI semantic keywords (also in meta) -->
+    <meta
+      name="keywords"
+      content="retail management software, sales tracking software, inventory tracking system, store management system, retail billing software, business management pos, store analytics software, smart retail system, sales management solution, inventory automation software"
+    />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta
+      property="og:title"
+      content="Modern POS Software for Retail Businesses | PHIXX LABS"
+    />
+    <meta
+      property="og:description"
+      content="Powerful POS software designed for retail stores, clothing shops, mobile stores, and more. Manage sales, inventory, and analytics with PHIXX LABS POS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://phixxlabs.com/" />
+    <meta property="og:image" content="https://phixxlabs.com/images/logo.jpg" />
+    <meta property="og:site_name" content="PHIXX LABS" />
+
+    <!-- Twitter SEO -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Modern POS Software | PHIXX LABS" />
+    <meta
+      name="twitter:description"
+      content="Smart POS software built for retail businesses. Manage inventory, sales, and analytics easily."
+    />
+    <meta
+      name="twitter:image"
+      content="https://phixxlabs.com/images/PHIXX_LOGO_CYCLE.png"
+    />
+    <meta name="twitter:creator" content="@PhixxL42151" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://phixxlabs.com/" />
+    <link rel="icon" href="images/logo.jpg" type="PhixxLabs-logo" />
+
+    <!-- Font & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS (separated block) -->
+    <style>
+      /* === CSS reset & variables === */
+      :root {
+        --primary: #6c63ff;
+        --secondary: #4d44db;
+        --dark: #2f2e41;
+        --light: #f8f9fa;
+        --accent: #ff6584;
+        --text: #4a4a4a;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        background-color: #ffffff;
+        line-height: 1.5;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--dark);
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ----- NAVIGATION (same look) ----- */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.02);
+        z-index: 1000;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--dark);
+        text-decoration: none;
+      }
+
+      .logo img {
+        height: 44px;
+        width: auto;
+        border-radius: 10px;
+        transition: transform 0.2s;
+      }
+
+      .logo:hover img {
+        transform: scale(1.03);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 42px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #1f1f33;
+        font-size: 1rem;
+        position: relative;
+        padding-bottom: 6px;
+        transition: 0.2s;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2.5px;
+        background: var(--primary);
+        transition: 0.15s;
+        border-radius: 4px;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+        width: 100%;
+      }
+
+      .nav-links a.active {
+        color: var(--primary);
+      }
+
+      /* mobile menu */
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        width: 40px;
+        height: 40px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 1100;
+      }
+
+      .menu-icon-bar {
+        width: 100%;
+        height: 3px;
+        background: var(--dark);
+        border-radius: 4px;
+        transition: 0.2s;
+      }
+
+      @media (max-width: 900px) {
+        .mobile-menu-btn {
+          display: flex;
+        }
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -300px;
+          width: 280px;
+          height: 100vh;
+          background: white;
+          flex-direction: column;
+          padding: 100px 30px 40px;
+          gap: 30px;
+          box-shadow: -10px 0 40px rgba(0, 0, 0, 0.07);
+          transition: right 0.3s ease;
+          z-index: 1050;
+        }
+        .nav-links.active {
+          right: 0;
+        }
+        .mobile-menu-btn.active .menu-icon-bar:nth-child(1) {
+          transform: rotate(45deg) translate(8px, 8px);
+        }
+        .mobile-menu-btn.active .menu-icon-bar:nth-child(2) {
+          opacity: 0;
+        }
+        .mobile-menu-btn.active .menu-icon-bar:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -8px);
+        }
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary);
+        color: white;
+        padding: 10px 24px;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.2s;
+        border: none;
+        cursor: pointer;
+        font-size: 0.95rem;
+      }
+      .btn-outline {
+        background: transparent;
+        border: 1.5px solid var(--primary);
+        color: var(--primary);
+      }
+      .btn-outline:hover {
+        background: var(--primary);
+        color: white;
+      }
+      .btn:hover {
+        background-color: var(--secondary);
+      }
+      /* hero */
+      .hero {
+        padding: 60px 0 40px;
+        background: linear-gradient(145deg, #fff 0%, #f5f7ff 100%);
+        margin-top: 5%;
+      }
+      .hero .container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      .hero-content {
+        flex: 1 1 400px;
+      }
+      .hero-content h1 {
+        font-size: 2.9rem;
+        margin-bottom: 20px;
+        color: var(--dark);
+      }
+      .hero-content h1 span {
+        color: var(--primary);
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+        color: #5a5a5a;
+        max-width: 550px;
+        margin-bottom: 32px;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .hero-image {
+        flex: 1 1 400px;
+        background: #eaeefb;
+        border-radius: 32px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 30px 40px -20px rgba(108, 99, 255, 0.3);
+        border: 1px solid rgba(108, 99, 255, 0.1);
+      }
+      .hero-image .dashboard-mock {
+        font-size: 1.1rem;
+        color: var(--dark);
+        background: white;
+        padding: 24px 16px;
+        border-radius: 24px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+      }
+      .hero-image i {
+        color: var(--primary);
+        margin-right: 8px;
+      }
+      .rating-pill {
+        background: rgba(108, 99, 255, 0.1);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 18px;
+        border-radius: 60px;
+        color: var(--primary);
+        font-weight: 600;
+        margin: 20px 0 0;
+      }
+
+      /* section tags */
+      .section-tag {
+        border: 2px solid var(--primary);
+        border-radius: 50px;
+        padding: 8px 24px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+        width: auto;
+        background-color: rgba(108, 99, 255, 0.05);
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .subhead {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 48px;
+        color: #5f5f6b;
+        font-size: 1.2rem;
+      }
+
+      /* vision principles */
+      .vision {
+        padding: 70px 0;
+        background: white;
+      }
+      .principles-grid {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+      .principle-card {
+        background: var(--light);
+        padding: 36px 28px;
+        border-radius: 28px;
+        flex: 1 1 200px;
+        text-align: center;
+        box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+      }
+      .principle-card:hover {
+        transform: translateY(-6px);
+      }
+      .principle-card .icon {
+        background: rgba(108, 99, 255, 0.1);
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        margin: 0 auto 24px;
+        color: var(--primary);
+        font-size: 2rem;
+      }
+      .principle-card h3 {
+        margin-bottom: 12px;
+        font-size: 1.6rem;
+      }
+
+      /* industries */
+      .industries {
+        background: var(--light);
+        padding: 70px 0;
+      }
+      .industry-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        margin: 48px 0 30px;
+      }
+      .badge {
+        background: white;
+        border-radius: 60px;
+        padding: 14px 32px;
+        font-weight: 600;
+        box-shadow: 0 5px 15px rgba(108, 99, 255, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.02);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--dark);
+        transition: all 0.2s;
+      }
+      .badge i {
+        color: var(--primary);
+        font-size: 1.3rem;
+      }
+      .badge:hover {
+        border-color: var(--primary);
+        background: #fff;
+        box-shadow: 0 10px 20px rgba(108, 99, 255, 0.15);
+      }
+
+      /* process steps */
+      .process {
+        padding: 70px 0;
+        background: white;
+      }
+      .steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 50px;
+      }
+      .step-item {
+        flex: 1 1 160px;
+        background: var(--light);
+        border-radius: 30px;
+        padding: 32px 22px;
+        text-align: center;
+        border-bottom: 4px solid var(--primary);
+      }
+      .step-number {
+        background: var(--primary);
+        color: white;
+        width: 48px;
+        height: 48px;
+        border-radius: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin: 0 auto 20px;
+      }
+
+      /* features grid */
+      .features {
+        background: var(--light);
+        padding: 70px 0;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+      .feature-card {
+        background: white;
+        border-radius: 28px;
+        padding: 30px 24px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+        border: 1px solid #f0f0fa;
+      }
+      .feature-card i {
+        font-size: 2.2rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      /* hashtags / SEO line */
+      .hashtags {
+        background: var(--dark);
+        color: #cdcddd;
+        padding: 30px 0;
+        font-size: 0.95rem;
+      }
+      .hashtags .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+        justify-content: center;
+      }
+      .hashtags span {
+        color: white;
+        font-weight: 500;
+      }
+      .hashtags a {
+        color: #b9b9e6;
+        text-decoration: none;
+        margin: 0 6px 0 0;
+        white-space: nowrap;
+      }
+      .hashtags a:hover {
+        color: var(--primary);
+      }
+
+      /* footer */
+      footer {
+        background: #121028;
+        color: #d5d4f0;
+        padding: 80px 0 20px;
+        border-radius: 60px 60px 0 0;
+        margin-top: 50px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-col h3 {
+        color: white;
+        font-weight: 600;
+        margin-bottom: 24px;
+        font-size: 1.3rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 14px;
+      }
+
+      .footer-links a {
+        color: #b2b2e1;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 20px;
+        margin-top: 24px;
+      }
+
+      .social-link {
+        background: rgba(255, 255, 255, 0.06);
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: 0.2s;
+      }
+
+      .social-link:hover {
+        background: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 60px;
+        padding-top: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img src="../images/logo.jpg" alt="PhixxLabs logo" /> PhixxLabs
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#projects">Projects</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="/#team">Team</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero + introduction (content from "Modern POS System – Built for Real Businesses / Introduction") -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Modern <span>POS System</span> – Built for Real Businesses</h1>
+          <p>
+            In today's fast-moving retail environment, businesses need a system
+            that is reliable, flexible, and easy to use. Our Point of Sale (POS)
+            solution was designed with exactly this goal in mind. From the very
+            beginning, our objective was to build a fully customizable POS
+            platform that could adapt to the needs of different industries while
+            remaining simple, fast, and cost-efficient.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn">View Projects</a>
+            <!-- <a href="#" class="btn btn-outline">Watch Demo</a> -->
+          </div>
+          <!-- <div class="rating-pill">
+          <i class="fas fa-star"></i> 4.8 (127 reviews) · #1 Modern POS
+        </div> -->
+        </div>
+        <div class="hero-image">
+          <div class="dashboard-mock">
+            <i
+              class="fas fa-chart-line fa-2x"
+              style="color: var(--primary)"
+            ></i>
+            <h3 style="margin: 16px 0 8px">Real‑Time Dashboard</h3>
+            <p style="color: var(--text)">Multiple Features</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 20px;
+                color: var(--primary);
+              "
+            >
+              <i class="fas fa-box"></i> <i class="fas fa-cash-register"></i>
+              <i class="fas fa-chart-pie"></i>
+            </div>
+          </div>
+          <p style="margin-top: 25px; font-size: 0.95rem">
+            <i class="fas fa-check-circle" style="color: var(--primary)"></i>
+            Used across 6+ industries
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Vision Behind Our POS (full text) -->
+    <section class="vision">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 5px">
+          <div class="section-tag">Our Vision</div>
+        </div>
+        <h2>Simple for users, powerful behind the scenes</h2>
+        <p class="subhead">
+          When we started building this POS system,
+          <b style="color: rgba(0, 0, 0, 0.785)">we had a clear vision:</b>
+          create a platform that is simple for users but powerful behind the
+          scenes. Many POS systems available are either too
+          <b style="color: rgba(0, 0, 0, 0.653)">
+            complex, too expensive, or lack flexibility.</b
+          >
+          Business owners often struggle with systems that cannot adapt to their
+          specific workflows. To solve this problem, we focused on three main
+          principles: Simplicity, Customization, and Efficiency.
+        </p>
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="icon"><i class="fas fa-magic"></i></div>
+            <h3>Simplicity</h3>
+            <p>
+              Any employee learns it quickly, no extensive training needed. Our
+              goal is that any business owner or employee can learn it fast.
+            </p>
+          </div>
+          <div class="principle-card">
+            <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+            <h3>Customization</h3>
+            <p>
+              Adapts to mobile, clothing, shoes, toys, motorcycles — every
+              workflow. We designed it to adapt to specific workflows.
+            </p>
+          </div>
+          <div class="principle-card">
+            <div class="icon"><i class="fas fa-rocket"></i></div>
+            <h3>Efficiency</h3>
+            <p>
+              Lightning fast inventory, sales, analytics — real-time sync.
+              powerful enough to handle inventory, sales, analytics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries We Built the POS For (full list) -->
+    <section class="industries">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 5px">
+          <div class="section-tag">Built for real industries</div>
+        </div>
+        <h2>Deployed & customized for multiple sectors</h2>
+        <p class="subhead">
+          So far, we have successfully implemented our POS system for multiple
+          industries. Each industry has its own workflow, product types, and
+          operational needs, so our system was designed to support these
+          variations.
+        </p>
+        <div class="industry-badges">
+          <span class="badge"
+            ><i class="fas fa-mobile-alt"></i> Mobile Phone Stores</span
+          >
+          <span class="badge"
+            ><i class="fas fa-headphones"></i> Mobile Accessories Shops</span
+          >
+          <span class="badge"
+            ><i class="fas fa-tshirt"></i> Clothing Stores</span
+          >
+          <span class="badge"
+            ><i class="fas fa-shoe-prints"></i> Shoe Stores</span
+          >
+          <span class="badge"
+            ><i class="fas fa-motorcycle"></i> Motorcycle Agencies</span
+          >
+          <span class="badge"><i class="fas fa-child"></i> Toy Stores</span>
+        </div>
+        <div style="text-align: center; margin: 30px auto; max-width: 800px">
+          <p>
+            <i class="fas fa-circle-check" style="color: var(--primary)"></i>
+            Mobile phone businesses manage variants; accessory shops handle
+            small items; clothing uses sizes/colors; shoe stores sizes;
+            motorcycle agencies vehicle & parts; toy stores seasonal categories.
+            <b>Our POS handles all.</b>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process (full steps) -->
+    <section class="process">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 5px">
+          <div class="section-tag">Step by step</div>
+        </div>
+        <h2>Development that scales</h2>
+        <p class="subhead">
+          Building a powerful POS system required careful planning and
+          step-by-step development. Our process focused on creating a system
+          that would be scalable, efficient, and easy to maintain.
+        </p>
+        <div class="steps">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <h4>Requirement Analysis</h4>
+            <p style="margin-top: 1rem">
+              We analyzed real retail workflows, inventory handling, sales
+              processes.
+            </p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <h4>System Architecture</h4>
+            <p style="margin-top: 1rem">
+              Designed for real-time data, fast speeds, and future scalability.
+            </p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <h4>UI/UX Design</h4>
+            <p style="margin-top: 1rem">
+              Clean, intuitive interface; users with minimal tech knowledge can
+              navigate.
+            </p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <h4>Development</h4>
+            <p style="margin-top: 1rem">
+              Each module built carefully, tested during process.
+            </p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">5</div>
+            <h4>Optimization & Testing</h4>
+            <p style="margin-top: 1rem">
+              Performance tested with large inventories & high transactions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features (from schema + extra) -->
+    <section class="features">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 5px">
+          <div class="section-tag">powerful features</div>
+        </div>
+        <h2>Everything you need in a modern POS</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <i class="fas fa-boxes"></i>
+            <h3>Inventory Management</h3>
+            <p style="margin-top: 1rem">
+              Track stock, low alerts, variants (size, color, storage).
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Sales Tracking</h3>
+            <p style="margin-top: 1rem">
+              Real‑time analytics, reports, and insights.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-cloud-sun"></i>
+            <h3>Cloud POS</h3>
+            <p style="margin-top: 1rem">
+              Firebase sync, access anywhere, real‑time data.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-barcode"></i>
+            <h3>Barcode scanning</h3>
+            <p style="margin-top: 1rem">Fast checkout & inventory updates.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-palette"></i>
+            <h3>Product variants</h3>
+            <p style="margin-top: 1rem">
+              Size, color, storage, model — fully supported.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h3>Customer management</h3>
+            <p style="margin-top: 1rem">
+              Loyalty, purchase history, and profiling.
+            </p>
+          </div>
+        </div>
+        <!-- extra note from content: React+Tailwind+Firebase -->
+        <!-- <p style="text-align: center; margin-top: 40px; font-style: italic; background: white; padding: 16px; border-radius: 60px; width: fit-content; margin-left: auto; margin-right: auto; border: 1px solid #eee;"><i class="fas fa-code"></i> Built with React, Tailwind CSS, and Google Firebase – high performance, real-time sync, minimal cost.</p> -->
+      </div>
+    </section>
+
+    <!-- Footer with open graph info and meta reinforcement -->
+    <!-- <footer class="footer">
+    <div class="container">
+      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 20px;">
+        <img src="https://phixxlabs.com/logo.png" alt="PHIXX LABS" style="height: 32px; filter: brightness(0.8);" onerror="this.style.display='none'">
+        <span>© 2026 PHIXX LABS · Modern POS for real businesses</span>
+      </div>
+      <p style="font-size: 0.9rem;">📸 https://phixxlabs.com/images/pos-dashboard.png  |  React · Tailwind · Firebase</p>
+      <p style="margin-top: 20px; font-size: 0.85rem;">Smart POS Software for Retail Stores & Inventory | PHIXX LABS — discover our POS system for clothing, mobile, toys, motorcycle agencies.</p>
+    </div>
+  </footer> -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h3>PhixxLabs</h3>
+            <p>Innovative frontend, UI/UX, graphics & video production.</p>
+            <div class="social-links">
+              <a
+                href="https://x.com/PhixxL42151"
+                class="social-link"
+                target="_blank"
+                ><i class="fab fa-x-twitter"></i></a
+              ><a
+                href="https://www.facebook.com/share/16MEXFdYsg/"
+                class="social-link"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+            
+              <li><a href="/#services">Services</a></li>
+              <li><a href="/#projects">Projects</a></li>
+              <li><a href="#">Features</a></li>
+            </ul>
+          </div>
+          <!-- <div class="footer-col"><h3>Why choose us</h3><ul class="footer-links"><li>Affordable</li><li>Creative</li><li>On‑time</li></ul></div> -->
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+              <li>phixxlabs@gmail.com</li>
+              <li>0302-7075521</li>
+              <li>0323-0125780</li>
+              <li>Gojra City</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2020‑26 PhixxLabs. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Structured Data (JSON-LD) embedded as requested, matches schema exactly -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PHIXX LABS POS Software",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "applicationSuite": "Retail POS System",
+        "description": "Modern POS software built for retail businesses. Manage inventory, sales, billing, and analytics with PHIXX LABS POS.",
+        "url": "https://phixxlabs.com",
+        "brand": {
+          "@type": "Brand",
+          "name": "PHIXX LABS"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "PHIXX LABS",
+          "url": "https://phixxlabs.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://phixxlabs.com/logo.png"
+          }
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "30k-50k",
+          "priceCurrency": "PKR",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "25K-50K",
+            "priceCurrency": "PKR",
+            "billingDuration": "P1M"
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "127",
+          "bestRating": "98",
+          "worstRating": "1"
+        },
+        "review": {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Retail Store Owner"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "PHIXX LABS POS helped us manage inventory and sales easily. It is fast and simple to use."
+        },
+        "featureList": [
+          "Inventory Management",
+          "Retail Sales Tracking",
+          "Cloud Data Sync",
+          "Real-time Analytics",
+          "Product Variants Support",
+          "Barcode Scanning",
+          "Customer Management"
+        ],
+        "screenshot": "https://phixxlabs.com/images/pos-dashboard.png",
+        "softwareVersion": "4.5.1",
+        "datePublished": "2026-02-28"
+      }
+    </script>
+  </body>
+</html>
