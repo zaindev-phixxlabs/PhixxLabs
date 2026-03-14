@@ -9,7 +9,7 @@
   <!-- Main Homepage -->
   <url>
     <loc>https://phixxlabs.com/</loc>
-    <lastmod>2025-01-01</lastmod>
+      <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <mobile:mobile/>
@@ -46,7 +46,7 @@
     <!-- Projects Section -->
   <url>
     <loc>https://phixxlabs.com/Features/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
