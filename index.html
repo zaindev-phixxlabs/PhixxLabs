@@ -3,9 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHIXX LABS - Digital Agency & POS System Experts</title>
+    <!-- Primary Meta Tags -->
+<title>PHIXX LABS – POS Software & Digital Solutions Company</title>
+<meta name="title" content="PHIXX LABS – POS Software & Digital Solutions Company">
+<meta name="description" content="Discover PHIXX LABS, a modern software company delivering POS systems, web development, UI/UX design, and fintech solutions for startups and businesses worldwide.">
+<meta name="keywords" content="PHIXX LABS, Web Development Company, POS Software, Retail POS System, UI UX Design Services, Fintech Solutions, Software House Pakistan, Cloud POS Software, Business Software Solutions, Frontend Development, phixx labs software company, best software house in pakistan, web development company for startups, custom pos software development company, ui ux design services for business websites, fintech software development solutions, react js web development company, cloud based pos software provider, inventory management pos system, affordable software development services pakistan, frontend backend development company, digital solutions provider for businesses, pos system development company, startup software development agency, digital solutions company, software development agency, business automation solutions, enterprise software systems, modern web applications, retail automation software, cloud based business tools, custom software solutions, startup tech solutions, scalable web applications">
+<meta name="author" content="PHIXX LABS">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:title" content="PHIXX LABS – POS Software & Digital Solutions Company">
+<meta property="og:description" content="PHIXX LABS delivers modern POS systems, web development, UI/UX design, and fintech solutions for businesses and startups.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phixxlabs.com">
+<meta property="og:image" content="https://phixxlabs.com/images/logo.jpg">
+<meta property="og:image:alt" content="PHIXX LABS - Modern Software Company">
+<meta property="og:site_name" content="PHIXX LABS">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PHIXX LABS – Web, POS & Fintech Solutions">
+<meta name="twitter:description" content="Build powerful POS systems, websites, and fintech apps with PHIXX LABS.">
+<meta name="twitter:image" content="https://phixxlabs.com/images/home-cover.png">
+<meta name="twitter:image:alt" content="PHIXX LABS Software Solutions">
+<meta name="twitter:site" content="@phixxlabs">
+<meta name="twitter:creator" content="@phixxlabs">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://phixxlabs.com">
+
+<!-- Robots Meta -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#000000">
+<meta name="msapplication-TileColor" content="#000000">
+
+
+
+
     <!-- Font Awesome 6 & Google Fonts (Inter) -->
     <link rel="icon" href="images/logo.jpg" type="PhixxLabs-logo" />
+    <link rel="stylesheet" href="navbar.css">
+    <script src="navbar-footer.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -14,6 +57,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap"
       rel="stylesheet"
     />
+
+   
+
     <style>
       * {
         margin: 0;
@@ -48,138 +94,7 @@
         padding: 0 32px;
       }
 
-      /* ----- NAVIGATION (same look) ----- */
-      .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.02);
-        z-index: 1000;
-        padding: 16px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-      }
-
-      .nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 700;
-        font-size: 1.8rem;
-        color: var(--dark);
-        text-decoration: none;
-      }
-
-      .logo img {
-        height: 44px;
-        width: auto;
-        border-radius: 10px;
-        transition: transform 0.2s;
-      }
-
-      .logo:hover img {
-        transform: scale(1.03);
-      }
-
-      .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 42px;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        font-weight: 500;
-        color: #1f1f33;
-        font-size: 1rem;
-        position: relative;
-        padding-bottom: 6px;
-        transition: 0.2s;
-      }
-
-      .nav-links a::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2.5px;
-        background: var(--primary);
-        transition: 0.15s;
-        border-radius: 4px;
-      }
-
-      .nav-links a:hover::after,
-      .nav-links a.active::after {
-        width: 100%;
-      }
-
-      .nav-links a.active {
-        color: var(--primary);
-      }
-
-      /* mobile menu */
-      .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        width: 40px;
-        height: 40px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 6px;
-        cursor: pointer;
-        z-index: 1100;
-      }
-
-      .menu-icon-bar {
-        width: 100%;
-        height: 3px;
-        background: var(--dark);
-        border-radius: 4px;
-        transition: 0.2s;
-      }
-
-      @media (max-width: 900px) {
-        .mobile-menu-btn {
-          display: flex;
-        }
-        .nav-links {
-          position: fixed;
-          top: 0;
-          right: -300px;
-          width: 280px;
-          height: 100vh;
-          background: white;
-          flex-direction: column;
-          padding: 100px 30px 40px;
-          gap: 30px;
-          box-shadow: -10px 0 40px rgba(0, 0, 0, 0.07);
-          transition: right 0.3s ease;
-          z-index: 1050;
-        }
-        .nav-links.active {
-          right: 0;
-        }
-        .mobile-menu-btn.active .menu-icon-bar:nth-child(1) {
-          transform: rotate(45deg) translate(8px, 8px);
-        }
-        .mobile-menu-btn.active .menu-icon-bar:nth-child(2) {
-          opacity: 0;
-        }
-        .mobile-menu-btn.active .menu-icon-bar:nth-child(3) {
-          transform: rotate(-45deg) translate(6px, -8px);
-        }
-      }
-
+    
       /* ----- HERO (original PHIXX_LOGO_CYCLE.png) ----- */
       header {
         background: radial-gradient(circle at 80% 30%, #f0efff, #ffffff 70%);
@@ -420,7 +335,7 @@
         flex: 1 1 300px; /* base width 300px, grows/shrinks */
         max-width: 360px; /* but never wider than 360px */
         background: white;
-        border-radius: 40px;
+        border-radius: 10px;
         box-shadow: var(--card-shadow);
         transition: 0.25s;
         display: flex;
@@ -495,22 +410,30 @@
         flex: 1;
       }
 
-      .project-link {
-        color: var(--primary);
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: auto;
+      /* Button Styles */
+      .project-btn {
+        background: linear-gradient(135deg, #3b2be5 0%, #5a4af5 100%);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: fit-content;
+        align-self: flex-start;
+        box-shadow: 0 4px 15px rgba(59, 43, 229, 0.3);
       }
 
-      .project-link i {
-        transition: transform 0.15s;
+      .project-btn:hover {
+        background: linear-gradient(135deg, #2a1eb5 0%, #3b2be5 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(59, 43, 229, 0.4);
       }
 
-      .project-link:hover i {
-        transform: translateX(5px);
+      .project-btn:active {
+        transform: translateY(0);
       }
 
       /* cards without image: we remove the image div entirely in HTML, so they look consistent */
@@ -564,6 +487,10 @@
         box-shadow: 0 18px 25px -12px var(--primary);
         margin-bottom: 22px;
       }
+      .team-image i{
+  font-size: 120px;
+  color: #ccc;
+}
 
       .team-name {
         font-size: 1.7rem;
@@ -671,76 +598,7 @@
         color: var(--primary);
       }
 
-      /* footer */
-      footer {
-        background: #121028;
-        color: #d5d4f0;
-        padding: 80px 0 20px;
-        border-radius: 60px 60px 0 0;
-        margin-top: 50px;
-      }
-
-      .footer-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 40px;
-      }
-
-      .footer-col h3 {
-        color: white;
-        font-weight: 600;
-        margin-bottom: 24px;
-        font-size: 1.3rem;
-      }
-
-      .footer-links {
-        list-style: none;
-      }
-
-      .footer-links li {
-        margin-bottom: 14px;
-      }
-
-      .footer-links a {
-        color: #b2b2e1;
-        text-decoration: none;
-      }
-
-      .footer-links a:hover {
-        color: white;
-        padding-left: 5px;
-      }
-
-      .social-links {
-        display: flex;
-        gap: 20px;
-        margin-top: 24px;
-      }
-
-      .social-link {
-        background: rgba(255, 255, 255, 0.06);
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        transition: 0.2s;
-      }
-
-      .social-link:hover {
-        background: var(--primary);
-        transform: translateY(-5px);
-      }
-
-      .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        margin-top: 60px;
-        padding-top: 30px;
-        text-align: center;
-      }
-
+     
       @media (max-width: 900px) {
         .hero,
         .about-company {
@@ -772,9 +630,11 @@
       }
     </style>
   </head>
-  <body>
+  <body id="pageBody" style="display:none;">
     <!-- Navigation -->
-    <nav class="navbar">
+
+    <div id="navbar-placeholder"></div>
+    <!-- <nav class="navbar">
       <div class="container nav-container">
         <a href="/" class="logo">
           <img src="images/logo.jpg" alt="PhixxLabs logo" /> PhixxLabs
@@ -789,12 +649,12 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
-          <!-- <li><a href="/Features/">Features</a></li> -->
+          <li><a href="/Features/">Features</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- HOME -->
     <header id="home">
@@ -927,89 +787,183 @@
       </div>
     </section>
 
-    <!-- PROJECTS – only POS card includes image, others text only. all cards same height & responsive -->
+    <!-- PROJECTS – all cards with images at top, same height & responsive -->
     <section id="projects">
       <div class="container">
         <div class="section-title">
           <h2><span>Our</span> Projects</h2>
         </div>
         <div class="projects-container">
-          <!-- 1. POS Management System (with image) -->
+          <!-- 1. Mobile POS -->
           <div class="project-card">
             <div class="project-image">
               <img
-                src="images/pakistan-motorcycles.web.app_dashboard.png"
-                alt="POS Management System"
+                src="images/MOBILE-IMAGE.png"
+                alt="Mobile POS System"
                 onerror="
                   this.src =
-                    'https://placehold.co/600x400/3b2be5/white?text=POS'
+                    'https://placehold.co/600x400/3b2be5/white?text=Mobile+POS'
                 "
               />
             </div>
             <div class="project-content">
-              <h3 class="project-title">POS System</h3>
+              <h3 class="project-title">Mobile POS</h3>
               <div class="project-tech">
                 <span class="tech-tag">Inventory</span>
                 <span class="tech-tag">Billing</span>
-                <span class="tech-tag">Accounts</span>
+                <span class="tech-tag">Sales</span>
               </div>
               <p class="project-desc">
-                Built for bike corporations to control stock, sales, and
-                accounts in one place. Real-time tracking. Fast billing.
-                Complete operational visibility.
+                Complete mobile POS solution for small shops. Track stock,
+                manage sales, and handle daily accounts on the go. Simple, fast,
+                and reliable.
               </p>
-
-              <span class="private-badge">Private Project</span>
+              <a href="mobilepos/">
+                <button class="project-btn">View Project</button></a
+              >
             </div>
           </div>
 
-          <!-- 2. Corporate Crypto Platform (no image) -->
+          <!-- 2. Clothing POS -->
           <div class="project-card">
-            <!-- NO image div intentionally -->
+            <div class="project-image">
+              <img
+                src="images/CLOTHS-SHOES-TOYS-IMG.png"
+                alt="Clothing POS System"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/3b2be5/white?text=Clothing+POS'
+                "
+              />
+            </div>
             <div class="project-content">
-              <h3 class="project-title">Crypto Hub</h3>
+              <h3 class="project-title">Clothing POS</h3>
               <div class="project-tech">
-                <span class="tech-tag">Modern UI/UX</span>
-                <span class="tech-tag">High per</span>
-                <span class="tech-tag">Crypto</span>
-                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">Fashion</span>
+                <span class="tech-tag">Inventory</span>
+                <span class="tech-tag">Billing</span>
               </div>
               <p class="project-desc">
-                We designed and developed a fully responsive, high-performance
-                web platform for international crypto clients. The site features
-                a clean and modern interface with optimized navigation,
-                intuitive layouts, and fast-loading performance. The platform
-                supports crypto-related functionalities while delivering smooth
-                user journeys and a professional digital presence for global
-                audiences.
+                Tailored for clothing retailers. Manage sizes, colors, and
+                categories. Quick checkout and customer purchase history.
               </p>
-
-              <span class="private-badge">Private Project</span>
+              <a href="clothingpos/"
+                ><button class="project-btn">View Project</button></a
+              >
             </div>
           </div>
 
-          <!-- 3. Rewards & Payment System (no image) -->
+          <!-- 3. Bike POS -->
           <div class="project-card">
-            <!-- NO image div -->
+            <div class="project-image">
+              <img
+                src="images/MOTER-IMAGE.png"
+                alt="Bike POS System"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/3b2be5/white?text=Bike+POS'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Bike POS</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Spare Parts</span>
+                <span class="tech-tag">Billing</span>
+                <span class="tech-tag">Service</span>
+              </div>
+              <p class="project-desc">
+                Designed for bike workshops and dealers. Manage bike sales,
+                spare parts, and service records in one system.
+              </p>
+              <a href="motorcyclepos/">
+                <button class="project-btn">View Project</button></a
+              >
+            </div>
+          </div>
+
+          <!-- 4. Toy POS -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/CLOTHS-SHOES-TOYS-IMG.png"
+                alt="Toy POS System"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/3b2be5/white?text=Toy+POS'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Toy POS</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Kids</span>
+                <span class="tech-tag">Inventory</span>
+                <span class="tech-tag">Discounts</span>
+              </div>
+              <p class="project-desc">
+                Easy-to-use POS for toy stores. Track stock, apply discounts,
+                and manage promotions for happy customers.
+              </p>
+              <a href="toypos/"
+                ><button class="project-btn">View Project</button></a
+              >
+            </div>
+          </div>
+
+          <!-- 5. Shoe POS -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/CLOTHS-SHOES-TOYS-IMG.png"
+                alt="Shoe POS System"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/3b2be5/white?text=Shoe+POS'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Shoe POS</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Footwear</span>
+                <span class="tech-tag">Sizes</span>
+                <span class="tech-tag">Sales</span>
+              </div>
+              <p class="project-desc">
+                Perfect for shoe retailers. Handle different sizes, brands, and
+                customer preferences with smooth billing.
+              </p>
+              <a href="shoepos/"
+                ><button class="project-btn">View Project</button></a
+              >
+            </div>
+          </div>
+
+          <!-- 6. Rewards Engine -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/Rewards-image.jpg"
+                alt="Rewards Engine System"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/3b2be5/white?text=Rewards+Engine'
+                "
+              />
+            </div>
             <div class="project-content">
               <h3 class="project-title">Rewards Engine</h3>
               <div class="project-tech">
                 <span class="tech-tag">Payments</span>
                 <span class="tech-tag">Rewards</span>
                 <span class="tech-tag">Secure</span>
-                <span class="tech-tag">Fintech</span>
               </div>
               <p class="project-desc">
-                We built a fully secure rewards and payment system designed for
-                smooth transactions, user account management, and reliable
-                reward tracking. The platform runs on a performance-focused
-                architecture with advanced security layers, ensuring fast
-                processing, real-time updates, and a seamless user experience —
-                while strictly protecting all client-related information due to
-                confidentiality.
+                Secure rewards & payment platform. Smooth transactions, user
+                account management, and reliable reward tracking.
               </p>
-
-              <span class="private-badge">Private Project</span>
+              <a href=""><button class="project-btn">View Project</button></a>
             </div>
           </div>
         </div>
@@ -1025,7 +979,7 @@
         <div class="team-container">
           <div class="team-card">
             <div class="team-image">
-              <img src="images/zain img.jpg" alt="Muhammad Zain" />
+              <i class="fas fa-user-tie"></i>
             </div>
             <h3 class="team-name">Muhammad Zain</h3>
             <p class="team-position">Lead Developer & UI/UX Designer</p>
@@ -1047,7 +1001,7 @@
           </div>
           <div class="team-card">
             <div class="team-image">
-              <img src="images/ahmad picture.png" alt="Muhammad Ahmad" />
+             <i class="fas fa-user-tie"></i>
             </div>
             <h3 class="team-name">Muhammad Ahmad</h3>
             <p class="team-position">Graphic Designer & Video Editor</p>
@@ -1116,58 +1070,9 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-container">
-          <div class="footer-col">
-            <h3>PhixxLabs</h3>
-            <p>Innovative frontend, UI/UX, graphics & video production.</p>
-            <div class="social-links">
-              <a
-                href="https://x.com/PhixxL42151"
-                class="social-link"
-                target="_blank"
-                ><i class="fab fa-x-twitter"></i></a
-              ><a
-                href="https://www.facebook.com/share/16MEXFdYsg/"
-                class="social-link"
-                target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <!-- <li><a href="/Features/">Features</a></li> -->
-            </ul>
-          </div>
-          <!-- <div class="footer-col"><h3>Why choose us</h3><ul class="footer-links"><li>Affordable</li><li>Creative</li><li>On‑time</li></ul></div> -->
-          <div class="footer-col">
-            <h3>Contact</h3>
-            <ul class="footer-links">
-              <li>phixxlabs@gmail.com</li>
-              <li>0302-7075521</li>
-              <li>0323-0125780</li>
-              <li>Gojra City</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p class="copyright">
-            &copy; 2020‑26 PhixxLabs. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-
+    <div id="footer-placeholder"></div>
     <!-- minimal JS for mobile menu + active link -->
-    <script>
+    <!-- <script>
       (function () {
         const menuBtn = document.getElementById("mobileMenuBtn");
         const navLinks = document.getElementById("navLinks");
@@ -1193,7 +1098,74 @@
           });
         });
       })();
-    </script>
+    </script> -->
+
+    <!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PHIXX LABS",
+  "url": "https://phixxlabs.com",
+  "logo": "https://phixxlabs.com/logo.png",
+  "description": "PHIXX LABS is a modern software company providing POS systems, web development, UI/UX design, and fintech solutions.",
+  "foundingDate": "2020",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gojra",
+    "addressRegion": "Punjab",
+    "addressCountry": "Pakistan"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+92-302-7075521",
+    "contactType": "customer support",
+    "areaServed": "PK"
+  },
+  "sameAs": [
+    "https://linkedin.com/company/phixxlabs",
+    "https://twitter.com/phixxlabs"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "PHIXX LABS Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "POS Software Development",
+          "description": "Custom retail POS systems with inventory and billing."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Web Development",
+          "description": "Modern websites using React and Node.js."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "UI UX Design",
+          "description": "User-friendly and modern interface design."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fintech Solutions",
+          "description": "Secure payment and reward-based systems."
+        }
+      }
+    ]
+  }
+}
+</script>
 
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},

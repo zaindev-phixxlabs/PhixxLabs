@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Rewards Platform for Web Platforms | PHIXX LABS</title>
+  
+  <!-- === META (all SEO requirements - updated without crypto focus) === -->
+  <meta name="description" content="Discover the modern digital rewards platform by PHIXX LABS. Earn, track, and redeem rewards through a secure loyalty system designed for web platforms, apps, and digital businesses." />
+  <meta name="keywords" content="Rewards Platform, Loyalty Program Platform, Digital Rewards System, Web Rewards Platform, Points Based Loyalty, User Engagement Platform, Incentive Platform, Digital Loyalty Solution, Reward Management System, Customer Engagement Platform, best rewards platform for web apps, loyalty program for digital platforms, rewards system for apps, points based loyalty platform, digital rewards system for businesses, incentive platform for users, reward management system for enterprises, loyalty infrastructure, custom loyalty program platform, secure rewards platform for web apps, real time reward tracking system, engagement rewards platform, points reward system for communities, best loyalty solution, digital loyalty system, incentive program software, reward infrastructure, web loyalty platform, reward management, digital asset incentive system, user engagement rewards software, loyalty reward automation, points based loyalty program" />
+  <meta name="author" content="PHIXX LABS" />
+  <link rel="canonical" href="https://phixxlabs.com/" />
+
+  <!-- Open Graph (Facebook/LinkedIn) - updated -->
+  <meta property="og:title" content="Digital Rewards Platform for Web Businesses | PHIXX LABS" />
+  <meta property="og:description" content="Powerful rewards platform designed for web apps and digital businesses. Earn, manage, and redeem loyalty rewards with PHIXX LABS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://phixxlabs.com/" />
+  <meta property="og:image" content="https://phixxlabs.com/images/rewards-dashboard.png" />
+  <meta property="og:site_name" content="PHIXX LABS" />
+
+  <!-- Twitter Card - updated -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Digital Rewards Platform | PHIXX LABS" />
+  <meta name="twitter:description" content="Modern rewards system built for web platforms. Track, earn, and redeem digital rewards easily." />
+  <meta name="twitter:image" content="https://phixxlabs.com/images/logo.jpg" />
+
+  <!-- Favicon / icon (placeholder) -->
+  <link rel="icon" href="../images/logo.jpg" type="image/jpeg" />
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles: navbar/footer included via external (placeholders) but we embed essential styles for consistency -->
+  <link rel="stylesheet" href="../navbar.css" />
+  <script src="../navbar-footer.js"></script>
+  
+  <!-- additional inline style for rewards theme + carousel -->
+  <style>
+    /* === base variables (consistent) === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #6c63ff;
+      --secondary: #4d44db;
+      --dark: #2f2e41;
+      --light: #f8f9fa;
+      --accent: #ff6584;
+      --text: #4a4a4a;
+    }
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: white;
+      line-height: 1.5;
+    }
+    h1, h2, h3, h4 { color: var(--dark); font-weight: 600; line-height: 1.2; }
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-tag {
+      border: 2px solid var(--primary);
+      border-radius: 50px;
+      padding: 8px 24px;
+      display: inline-block;
+      margin: 0 auto 20px;
+      background: rgba(108,99,255,0.05);
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    h2 { font-size: 2.2rem; text-align: center; margin-bottom: 20px; }
+    .subhead { text-align: center; max-width: 800px; margin: 0 auto 40px; color: #5f5f6b; font-size: 1.2rem; }
+    .btn {
+      display: inline-block; background-color: var(--primary); color: white; padding: 12px 32px;
+      border-radius: 40px; font-weight: 600; text-decoration: none; transition: background 0.2s;
+      border: none; cursor: pointer; font-size: 1rem;
+    }
+    .btn-outline {
+      background: transparent; border: 1.5px solid var(--primary); color: var(--primary);
+    }
+    .btn-outline:hover { background: var(--primary); color: white; }
+    .btn:hover { background-color: var(--secondary); }
+
+    /* hero */
+    .hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(145deg, #fff 0%, #f0f3ff 100%);
+      margin-top: 0;
+      text-align: center;
+    }
+    .hero-content h1 { font-size: clamp(2rem,6vw,3.2rem); margin-bottom: 20px; }
+    .hero-content p { font-size: clamp(1rem,3vw,1.25rem); max-width: 780px; margin:0 auto 30px; }
+    .hero-badge {
+      background: rgba(108,99,255,0.1); display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 22px; border-radius: 60px; color: var(--primary); font-weight: 600;
+      margin-bottom: 30px; font-size: 1rem;
+    }
+    /* principles grid / cards */
+    .principles-grid {
+      display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin: 50px 0 20px;
+    }
+    .principle-card {
+      background: var(--light); padding: 36px 20px; border-radius: 28px; flex: 1 1 260px;
+      min-width: 260px; text-align: center; box-shadow: 0 10px 25px -10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .principle-card:hover { transform: translateY(-6px); }
+    .icon-large {
+      background: rgba(108,99,255,0.1); width: 70px; height: 70px; line-height: 70px;
+      border-radius: 50%; margin: 0 auto 24px; color: var(--primary); font-size: 2rem;
+    }
+    .two-col { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .two-col > div { flex: 1 1 300px; min-width: 280px; }
+    .feature-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 25px; margin-top: 40px;
+    }
+    .feature-card {
+      background: white; border-radius: 28px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+      border: 1px solid #f0f0fa; text-align: center;
+    }
+    .feature-card i { font-size: 2.2rem; color: var(--primary); margin-bottom: 20px; }
+    .challenge-section {
+      background: var(--light); padding: 60px 0; border-radius: 48px; margin: 40px 0;
+    }
+    .challenge-card {
+      background: white; padding: 45px 35px; border-radius: 40px; text-align: center;
+      border: 1px solid rgba(108,99,255,0.1);
+    }
+
+    /* Carousel Modal */
+    .carousel-modal__open-btn {
+      display: inline-block; background: var(--primary); color: white; padding: 12px 32px;
+      border-radius: 40px; font-weight: 600; border: none; cursor: pointer; font-size: 1rem;
+      text-decoration: none;
+    }
+    .carousel-modal {
+      display: none; position: fixed; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); z-index:1000; justify-content: center; align-items: center;
+    }
+    .carousel-modal.active { display: flex; }
+    .carousel-modal__content {
+      position: relative; width:90%; max-width:850px; background:white; border-radius:20px; overflow:hidden;
+      box-shadow: 0 20px 40px rgba(108,99,255,0.2); border:1px solid rgba(108,99,255,0.1);
+    }
+    .carousel-modal__header { background:white; padding:20px 25px; border-bottom:2px solid var(--primary); }
+    .carousel-modal__title { color: var(--primary); font-size:24px; font-weight:bold; text-transform:uppercase; letter-spacing:1px; }
+    
+    /* carousel container */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      background: #f5f5f5;
+    }
+    .carousel-slide {
+      display: none;
+      width: 100%;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      max-height: 450px;
+      object-fit: contain;
+      background: #1a1a2e;
+      display: block;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(108,99,255,0.8);
+      color: white;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 10;
+    }
+    .carousel-btn:hover {
+      background: var(--primary);
+    }
+    .carousel-prev { left: 20px; }
+    .carousel-next { right: 20px; }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px 0;
+      background: white;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+    }
+    .dot.active {
+      background: var(--primary);
+    }
+    .carousel-modal__close {
+      position:absolute; top:20px; right:25px; background:white; color:var(--primary); border:2px solid var(--primary);
+      width:36px; height:36px; border-radius:50%; font-size:20px; cursor:pointer; display:flex; align-items:center;
+      justify-content:center; transition:all 0.3s; z-index:1001; font-weight:bold;
+    }
+    .carousel-modal__close:hover { background:var(--primary); color:white; transform:rotate(90deg); }
+    .carousel-modal__footer { background:white; padding:15px 25px; border-top:1px solid rgba(108,99,255,0.1); text-align:right; }
+    .carousel-modal__footer-text { color:var(--primary); font-size:12px; opacity:0.8; }
+
+    @media (max-width:768px) {
+      h2 { font-size:1.8rem; }
+      .subhead { font-size:1rem; }
+      .hero { padding:100px 0 50px; }
+      .hero-content h1 { font-size:2.2rem; }
+      .btn { padding:10px 24px; }
+      .principle-card { min-width:100%; }
+      .two-col > div { min-width:100%; }
+      .feature-grid { grid-template-columns:1fr; }
+      .challenge-card { padding:35px 20px; }
+      .carousel-btn { width: 36px; height: 36px; font-size: 18px; }
+    }
+    @media (max-width:480px) {
+      h2 { font-size:1.6rem; }
+      .hero-content h1 { font-size:1.9rem; }
+    }
+  </style>
+</head>
+<body id="pageBody" style="display:none;">
+  <!-- Navigation placeholder (external) -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO section (digital rewards - no crypto) -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><i class="fa-solid fa-gift"></i> PHIXX LABS · Digital Rewards Platform</div>
+      <div class="hero-content">
+        <h1>Rewards Program <span style="color: var(--primary);">Platform</span></h1>
+        <p><strong>Built by PHIXX LABS.</strong> Every powerful rewards system begins with understanding user motivation. People often think a rewards program is simply about giving points — something users collect and redeem for small benefits. But at PHIXX LABS, we see rewards very differently. A modern rewards ecosystem is not just a points tracker. It is a complete engagement platform that connects users, transactions, digital assets, and incentives into one seamless experience.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <!-- Carousel trigger button -->
+          <a href="#" class="carousel-modal__open-btn"><i class="fa-regular fa-images"></i> View platform snapshots</a>
+          <a href="/#contact" class="btn btn-outline"><i class="fa-solid fa-headset"></i> Talk to us</a>
+        </div>
+        <p style="margin-top: 32px; font-size: 1rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Real‑time reward tracking · flexible redemption · seamless integration</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Understanding the digital rewards economy -->
+  <section style="padding: 40px 0 20px;">
+    <div class="container">
+      <div style="text-align: center;"><span class="section-tag">Understanding the digital rewards economy</span></div>
+      <h2>From points to real digital value</h2>
+      <p class="subhead">The way people interact with value is changing rapidly. Traditional rewards programs were built around credit card spending, travel perks, and retail purchases. But the digital economy has introduced new types of activity: web platform engagement, digital services, app interactions, and online communities. Users today expect rewards to be instant, transparent, and flexible. Instead of waiting for points to accumulate over months, people want to see rewards appear immediately and be usable across different services. This shift is exactly what PHIXX LABS set out to address.</p>
+      <div class="principles-grid">
+        <div class="principle-card"><div class="icon-large"><i class="fa-solid fa-bolt"></i></div><h3 style="margin-bottom: 10px;">Instant rewards</h3><p>No waiting periods. Rewards appear immediately after user actions.</p></div>
+        <div class="principle-card"><div class="icon-large"><i class="fa-solid fa-arrow-right-arrow-left"></i></div><h3 style="margin-bottom: 10px;">Transparent & flexible</h3><p>Every transaction visible. Redeem, transfer, or hold rewards.</p></div>
+        <div class="principle-card"><div class="icon-large"><i class="fa-solid fa-wallet"></i></div><h3 style="margin-bottom: 10px;">Digitally native</h3><p>Integrates with web platforms, apps, and digital services natively.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Designing a rewards system that feels effortless -->
+  <section style="padding: 40px 0; background: white;">
+    <div class="container">
+      <div style="text-align: center;"><span class="section-tag">effortless experience</span></div>
+      <h2>Simple for users, powerful behind the scenes</h2>
+      <br>
+      <div class="two-col" style="align-items: start;">
+        <div>
+          <p style="font-size:1.2rem; margin-bottom:20px;"><i class="fa-solid fa-caret-right" style="color: var(--primary);"></i> When users interact with the PHIXX LABS Rewards platform, everything feels intuitive. Rewards are earned automatically. Balances update in real time. Transactions are transparent and easy to understand.</p>
+          <p style="font-size:1.2rem;"><i class="fa-solid fa-caret-right" style="color: var(--primary);"></i> <b>Users can clearly see:</b> Earned reward points, available balances, reward history, redemption options, and activity insights. The entire system is designed to remove complexity and make digital rewards feel natural.</p>
+        </div>
+        <div style="background: #eaeefb; border-radius: 32px; padding: 30px; text-align: center; box-shadow: 0 20px 30px -10px rgba(108,99,255,0.2);">
+          <i class="fa-solid fa-chart-simple" style="font-size: 3rem; color: var(--primary);"></i>
+          <h3 style="margin: 20px 0 10px;">Live rewards dashboard</h3>
+          <p style="background: white; border-radius: 20px; padding: 16px; margin-top: 20px;">
+            <i class="fa-solid fa-circle-check" style="color:var(--primary);"></i> Earned: 2,450 pts<br>
+            <i class="fa-solid fa-clock"></i> Recent: login, purchase, referral
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The PHIXX LABS Rewards Experience (new section from content) -->
+  <section style="padding: 40px 0; background: var(--light);">
+    <div class="container">
+      <div style="text-align: center;"><span class="section-tag">The rewards experience</span></div>
+      <h2>Every action can generate value</h2>
+      <p class="subhead">When users join the PHIXX LABS Rewards ecosystem, they enter a platform where every action can generate value. Rewards can be earned through multiple interactions, such as platform engagement, transaction activity, partner integrations, and promotional campaigns. Instead of traditional limited points, the system operates with flexible reward units that can integrate directly with digital wallets and services.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 30px;">
+        <div style="background: white; border-radius: 20px; padding: 30px; flex: 1 1 200px; text-align: center;"><i class="fa-solid fa-arrow-pointer fa-2x" style="color:var(--primary);"></i><h3 style="margin: 15px 0;">Accumulate</h3><p>Rewards build up from everyday interactions.</p></div>
+        <div style="background: white; border-radius: 20px; padding: 30px; flex: 1 1 200px; text-align: center;"><i class="fa-solid fa-rotate-left fa-2x" style="color:var(--primary);"></i><h3 style="margin: 15px 0;">Redeem</h3><p>Use rewards for services, upgrades, or transfers.</p></div>
+        <div style="background: white; border-radius: 20px; padding: 30px; flex: 1 1 200px; text-align: center;"><i class="fa-solid fa-arrow-right-arrow-left fa-2x" style="color:var(--primary);"></i><h3 style="margin: 15px 0;">Transfer</h3><p>Move rewards across linked platforms.</p></div>
+      </div>
+    </div>
+  </section>
+
+<!-- Building the Technology (Modern & Fast) -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div style="text-align: center;"><span class="section-tag">built for speed & simplicity</span></div>
+      <h2>Technology that works for you</h2>
+      <div class="feature-grid">
+        <div class="feature-card"><i class="fa-solid fa-bolt"></i><h3 style="margin-bottom: 10px;">Lightning Fast</h3><p>Everything updates instantly — no waiting, no delays. Pure speed.</p></div>
+        <div class="feature-card"><i class="fa-regular fa-hand-pointer"></i><h3 style="margin-bottom: 10px;">Easy to Use</h3><p>Simple, clean interface. No learning curve. Just works.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-rotate"></i><h3>Always Fresh</h3 style="margin-bottom: 10px;"><p>Real-time updates. You always see the latest info.</p></div>
+        <div class="feature-card"><i class="fa-regular fa-circle-check"></i><h3>Rock Solid</h3 style="margin-bottom: 10px;"><p>Built to handle anything. Fast, reliable, stress-free.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solving Challenges (adapted) -->
+  <section class="challenge-section">
+    <div class="container">
+      <div style="text-align: center;"><span class="section-tag">solving rewards complexity</span></div>
+      <h2>Built to overcome digital challenges</h2>
+      <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+        <div class="challenge-card">
+          <h3 style="margin-bottom: 35px; color: var(--primary);">Unique challenges</h3>
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="font-size: 1.2rem; font-weight: 500;">Secure point tracking across multiple services</div>
+            <div style="font-size: 1.2rem; font-weight: 500;">Real‑time reward calculation for high‑frequency actions</div>
+            <div style="font-size: 1.2rem; font-weight: 500;">Transparent, tamper‑proof reward history</div>
+          </div>
+        </div>
+        <div class="challenge-card">
+          <h3 style="margin-bottom: 35px; color: var(--primary);">PHIXX LABS solutions</h3>
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="font-size: 1.2rem; font-weight: 500;">Cloud‑ready architecture with API integration</div>
+            <div style="font-size: 1.2rem; font-weight: 500;">Instant reward engine — processes millions of events</div>
+            <div style="font-size: 1.2rem; font-weight: 500;">Auditable logs and real‑time dashboards for users</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reward features grid (earn / track / redeem / flexibility) -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div style="text-align: center;"><span class="section-tag">complete reward ecosystem</span></div>
+      <h2>Earn, track, and redeem — fully flexible</h2>
+      <div class="feature-grid">
+        <div class="feature-card"><i class="fa-solid fa-circle-dollar-to-slot"></i><h3 style="margin-bottom: 10px;">Earn automatically</h3><p>Engagement, transactions, campaigns — all trigger instant rewards.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-chart-line"></i><h3 style="margin-bottom: 10px;">Real‑time tracking</h3><p>Live balances, history, and insights. Always up to date.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-arrows-spin"></i><h3 style="margin-bottom: 10px;">Flexible redemption</h3><p>Services, upgrades, transfers, partner integrations — you decide.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-gear"></i><h3 style="margin-bottom: 10px;">Customizable rules</h3><p>Tailor earning rates, tiers, and structures to your business.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fully customizable platform -->
+  <section style="background: white; padding: 30px 0 60px;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag">100% customizable</span>
+      <h2 style="margin-bottom: 25px;">Adapt the rewards engine as you grow</h2>
+      <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">Configure reward rules, user tiers, redemption models — everything matches your brand and strategy. The platform evolves with your digital ecosystem. Many rewards systems are rigid, but PHIXX LABS platform is designed to be fully customizable for each business.</p>
+      <div style="margin-top: 35px;"><i class="fa-solid fa-cubes fa-2x" style="color: var(--primary);"></i> <i class="fa-solid fa-pen-to-square fa-2x" style="color: var(--primary); margin-left: 20px;"></i></div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Image Carousel Modal (4 images) -->
+  <div class="carousel-modal">
+    <div class="carousel-modal__content">
+      <div class="carousel-modal__header">
+        <h2 class="carousel-modal__title">Platform Snapshots</h2>
+      </div>
+      <button class="carousel-modal__close">✕</button>
+      
+      <!-- Carousel area -->
+      <div class="carousel-container">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+          <img src="../images/Rewards-image.jpg" alt="Rewards Dashboard Preview 1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <img src="../images/Rewards-image-redeem .jpg" alt="Rewards Analytics View 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <img src="../images/Rewards-image-dashboard .jpg" alt="Redemption Options 3">
+        </div>
+        <!-- Slide 4 -->
+        <!-- <div class="carousel-slide">
+          <img src="https://placehold.co/1200x675/2f2e41/6c63ff?text=Mobile+App+View+4" alt="Mobile Rewards View 4">
+        </div> -->
+
+        <button class="carousel-btn carousel-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn carousel-next"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <!-- <span class="dot" data-index="3"></span> -->
+        </div>
+      </div>
+
+      <div class="carousel-modal__footer">
+        <span class="carousel-modal__footer-text">Built by PHIXX LABS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Structured Data (updated - no crypto) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PHIXX LABS Digital Rewards Platform",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "applicationSuite": "Loyalty Rewards System",
+    "description": "A modern digital rewards platform built for web applications. Earn, track, and redeem rewards through a secure incentive system developed by PHIXX LABS.",
+    "url": "https://phixxlabs.com/rewards-platform",
+    "brand": { "@type": "Brand", "name": "PHIXX LABS" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PHIXX LABS",
+      "url": "https://phixxlabs.com",
+      "logo": { "@type": "ImageObject", "url": "https://phixxlabs.com/images/logo.jpg" }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "Custom",
+      "priceCurrency": "PKR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "84",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Digital Platform Founder" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "PHIXX LABS built a powerful rewards system that helped us increase user engagement and build a stronger community."
+    },
+    "featureList": [
+      "Reward Distribution",
+      "Points Based Loyalty System",
+      "Real Time Reward Tracking",
+      "User Engagement Rewards",
+      "Flexible Reward Rules",
+      "Dashboard Analytics"
+    ],
+    "screenshot": "https://phixxlabs.com/images/rewards-dashboard.png",
+    "softwareVersion": "2.0.0",
+    "datePublished": "2026-03-15"
+  }
+  </script>
+
+  <!-- Tawk.to live chat -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/6872550a5d2f93190ecc6448/1ivv9od35";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+<!-- Carousel modal script (fixed: pause on hold) -->
+  <script>
+    (function() {
+      const modal = document.querySelector(".carousel-modal");
+      const openBtn = document.querySelector(".carousel-modal__open-btn");
+      const closeBtn = document.querySelector(".carousel-modal__close");
+      const slides = document.querySelectorAll(".carousel-slide");
+      const prevBtn = document.querySelector(".carousel-prev");
+      const nextBtn = document.querySelector(".carousel-next");
+      const dots = document.querySelectorAll(".dot");
+      let currentIndex = 0;
+      let slideInterval;
+      let holdTimeout;
+      let isHolding = false;
+
+      function showSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+        currentIndex = index;
+      }
+
+      function nextSlide() { 
+        if (!isHolding) {
+          showSlide(currentIndex + 1); 
+        }
+      }
+      
+      function prevSlide() { 
+        if (!isHolding) {
+          showSlide(currentIndex - 1); 
+        }
+      }
+
+      function startAutoSlide() {
+        if (slideInterval) clearInterval(slideInterval);
+        slideInterval = setInterval(() => {
+          if (!isHolding) {
+            nextSlide();
+          }
+        }, 3000);
+      }
+
+      function stopAutoSlide() {
+        if (slideInterval) {
+          clearInterval(slideInterval);
+          slideInterval = null;
+        }
+      }
+
+      // Handle mouse down and hold
+      function handleHoldStart() {
+        isHolding = true;
+        stopAutoSlide();
+      }
+
+      function handleHoldEnd() {
+        isHolding = false;
+        startAutoSlide();
+      }
+
+      if (openBtn) {
+        openBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          modal.classList.add("active");
+          showSlide(0);
+          startAutoSlide();
+        });
+      }
+
+      function closeModal() {
+        modal.classList.remove("active");
+        stopAutoSlide();
+        isHolding = false;
+      }
+
+      if (closeBtn) closeBtn.addEventListener("click", closeModal);
+      
+      modal.addEventListener("click", (e) => { 
+        if (e.target === modal) closeModal(); 
+      });
+      
+      document.addEventListener("keydown", (e) => { 
+        if (e.key === "Escape" && modal.classList.contains("active")) closeModal(); 
+      });
+
+      // Add hold detection on carousel container and images
+      const carouselContainer = document.querySelector(".carousel-container");
+      const carouselImages = document.querySelectorAll(".carousel-slide img");
+      
+      if (carouselContainer) {
+        // Mouse events for hold
+        carouselContainer.addEventListener("mousedown", handleHoldStart);
+        carouselContainer.addEventListener("mouseup", handleHoldEnd);
+        carouselContainer.addEventListener("mouseleave", handleHoldEnd);
+        
+        // Touch events for mobile
+        carouselContainer.addEventListener("touchstart", handleHoldStart);
+        carouselContainer.addEventListener("touchend", handleHoldEnd);
+        carouselContainer.addEventListener("touchcancel", handleHoldEnd);
+        
+        carouselContainer.addEventListener("click", (e) => e.stopPropagation());
+      }
+      
+      // Also add hold detection on images
+      carouselImages.forEach(img => {
+        img.addEventListener("mousedown", handleHoldStart);
+        img.addEventListener("mouseup", handleHoldEnd);
+        img.addEventListener("mouseleave", handleHoldEnd);
+        img.addEventListener("touchstart", handleHoldStart);
+        img.addEventListener("touchend", handleHoldEnd);
+        img.addEventListener("touchcancel", handleHoldEnd);
+      });
+
+      // Button click handlers
+      if (nextBtn) {
+        nextBtn.addEventListener("click", (e) => { 
+          e.stopPropagation(); 
+          if (!isHolding) {
+            nextSlide(); 
+            stopAutoSlide();
+            startAutoSlide();
+          }
+        });
+      }
+      
+      if (prevBtn) {
+        prevBtn.addEventListener("click", (e) => { 
+          e.stopPropagation(); 
+          if (!isHolding) {
+            prevSlide(); 
+            stopAutoSlide();
+            startAutoSlide();
+          }
+        });
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (!isHolding) {
+            showSlide(idx);
+            stopAutoSlide();
+            startAutoSlide();
+          }
+        });
+      });
+
+      // Handle initial state
+      window.addEventListener("load", () => {
+        // Ensure first slide is visible when modal opens
+      });
+    })();
+  </script>
+
+  <!-- Make body visible -->
+  <script>
+    document.getElementById('pageBody').style.display = 'block';
+  </script>
+</body>
+</html>

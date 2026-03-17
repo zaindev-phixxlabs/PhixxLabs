@@ -51,6 +51,41 @@
     <priority>0.95</priority>
   </url>
 
+    <url>
+    <loc>https://phixxlabs.com/clothingpos/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+      <url>
+    <loc>https://phixxlabs.com/mobilepos/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+ <url>
+    <loc>https://phixxlabs.com/motorcyclepos/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+   <url>
+    <loc>https://phixxlabs.com/shoepos/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+     <url>
+    <loc>https://phixxlabs.com/toypos/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <!-- Team Section -->
   <url>
     <loc>https://phixxlabs.com/#team</loc>
