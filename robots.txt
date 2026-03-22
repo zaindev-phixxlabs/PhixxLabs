@@ -1,22 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /config/
-Disallow: /private/
-Disallow: /backup/
-Disallow: /node_modules/
-Disallow: /*?*
-Disallow: /*search*
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
 
 Sitemap: https://phixxlabs.com/sitemap.xml
