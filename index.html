@@ -628,6 +628,336 @@
         padding: 4px 10px;
         border-radius: 20px;
       }
+
+
+      /* =========================================
+   PHIXXCORE SECTION
+========================================= */
+
+#phixxcore {
+  background: linear-gradient(
+    180deg,
+    #f5f7ff 0%,
+    #ffffff 100%
+  );
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Main Layout */
+
+.pcx-wrapper {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 55px;
+
+  background: #ffffff;
+  border: 1px solid rgba(59, 43, 229, 0.08);
+  border-radius: 28px;
+
+  padding: 38px;
+  box-shadow: var(--card-shadow);
+
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Left Content */
+
+.pcx-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Brand */
+
+.pcx-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pcx-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.pcx-brand span {
+  color: #77778d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Heading */
+
+.pcx-content h3 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 18px;
+  letter-spacing: -1.2px;
+}
+
+.pcx-content h3 span {
+  display: block;
+
+  background: linear-gradient(
+    130deg,
+    var(--primary),
+    var(--accent)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+
+.pcx-description {
+  color: #55556c;
+  font-size: 0.96rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  max-width: 410px;
+}
+
+/* Highlights */
+
+.pcx-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.pcx-highlight {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.pcx-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f0efff;
+  border-radius: 12px;
+}
+
+.pcx-icon svg {
+  width: 21px;
+  height: 21px;
+
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pcx-highlight div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pcx-highlight strong {
+  color: #25243b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pcx-highlight span {
+  color: #77778d;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* Website Button */
+
+.pcx-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    #5a4af5
+  );
+
+  color: #ffffff;
+  text-decoration: none;
+
+  padding: 13px 27px;
+  border-radius: 50px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  box-shadow: 0 8px 20px rgba(59, 43, 229, 0.22);
+
+  transition: all 0.25s ease;
+}
+
+.pcx-button svg {
+  width: 17px;
+  height: 17px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.25s ease;
+}
+
+.pcx-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(59, 43, 229, 0.28);
+}
+
+.pcx-button:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Right Image */
+
+.pcx-visual {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f6ff;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.pcx-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  max-height: 440px;
+
+  display: block;
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+.pcx-visual:hover img {
+  transform: scale(1.025);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* Tablets and smaller laptops */
+
+@media (max-width: 900px) {
+  .pcx-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 28px;
+  }
+
+  .pcx-content h3 {
+    font-size: 2rem;
+  }
+
+  .pcx-visual img {
+    min-height: 340px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  #phixxcore {
+    padding: 70px 0;
+  }
+
+  .pcx-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+
+  .pcx-content {
+    width: 100%;
+  }
+
+  .pcx-brand {
+    margin-bottom: 18px;
+  }
+
+  .pcx-content h3 {
+    font-size: 2rem;
+  }
+
+  .pcx-description {
+    font-size: 0.92rem;
+  }
+
+  .pcx-highlights {
+    gap: 17px;
+  }
+
+  .pcx-visual {
+    border-radius: 16px;
+  }
+
+  .pcx-visual img {
+    min-height: 240px;
+    max-height: 320px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+  .pcx-wrapper {
+    padding: 20px 16px;
+  }
+
+  .pcx-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .pcx-highlight span {
+    font-size: 0.73rem;
+  }
+
+  .pcx-button {
+    width: 100%;
+  }
+
+  .pcx-visual img {
+    min-height: 200px;
+  }
+}
     </style>
   </head>
   <body id="pageBody" style="display:none;">
@@ -969,6 +1299,99 @@
         </div>
       </div>
     </section>
+
+
+    <!-- PHIXXCORE SECTION -->
+<section id="phixxcore">
+  <div class="container">
+
+    <div class="section-title">
+      <h2><span>Explore</span> PhixxCore</h2>
+    </div>
+
+    <div class="pcx-wrapper">
+
+      <!-- LEFT CONTENT -->
+      <div class="pcx-content">
+
+        <div class="pcx-brand">
+          <img
+            src="images/phixxcore-logo.png"
+            alt="PhixxCore Logo"
+            class="pcx-logo"
+          />
+          <span>BY PHIXX LABS</span>
+        </div>
+
+        <h3>
+          Powerful Tools.
+          <span>Private by Design.</span>
+        </h3>
+
+        <p class="pcx-description">
+          PhixxCore brings practical digital tools together
+          in one clean and easy-to-use browser experience.
+        </p>
+
+        <div class="pcx-highlights">
+
+          <div class="pcx-highlight">
+            <div class="pcx-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+
+            <div>
+              <strong>Privacy-focused</strong>
+              <span>Browser-based processing for all tools.</span>
+            </div>
+          </div>
+
+          <div class="pcx-highlight">
+            <div class="pcx-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="14" rx="2"/>
+                <path d="M8 22h8M12 18v4"/>
+              </svg>
+            </div>
+
+            <div>
+              <strong>Works Across Devices</strong>
+              <span>Designed for desktop, tablet and mobile.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <a
+          href="https://www.phixxcore.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pcx-button"
+        >
+          Visit Website
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 17 17 7M7 7h10v10"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="pcx-visual">
+        <img
+          src="images/phixxcore.png"
+          alt="PhixxCore Digital Tools Platform"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- TEAM with original images -->
     <section id="team" style="background: #ffffff">
